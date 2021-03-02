@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE controladores SYSTEM "dtds/controladores.dtd">
+
+<controladores>
+
+    <controlador nombre="Factura">
+    	<accion nombre="verNombreCliente" modo="detail" 
+    		clase="com.gestion400.facturacion.acciones.VerNombreClienteEnFacturas"/>
+    	<accion nombre="verEstado" modo="detail" 
+    		clase="com.gestion400.facturacion.acciones.VerEstadoFactura"/>
+    	<accion nombre="clonarFactura1" modo="list"
+			clase="com.gestion400.facturacion.acciones.ClonarFacturaOpcion1"/>
+		<accion nombre="clonarFactura2" modo="list"
+			clase="com.gestion400.facturacion.acciones.ClonarFacturaOpcion2"/>
+		<accion nombre="seleccionar" modo="list"
+			clase="com.gestion400.facturacion.acciones.EntrarEnModoDetalle"/>
+		<accion nombre="irALaLista" modo="detail"
+			clase="com.gestion400.facturacion.acciones.IrAlModoLista"/>
+    </controlador>
+
+	<controlador nombre="FacturasPagadas">
+		<hereda-de controlador="Typical"/>
+		<accion nombre="verElementosSeleccionados" modo="list"
+			clase="com.gestion400.facturacion.acciones.VerElementosSeleccionados"/>
+		<accion nombre="verTotal" modo="list"
+			clase="com.gestion400.facturacion.acciones.VerTotal"/>
+	</controlador>
+	
+	<controlador nombre="CRUDReimplementado">
+		<accion nombre="soloLectura" clase="com.gestion400.facturacion.acciones.IniciarEnSoloLectura"/>
+	</controlador>
+    
+</controladores>
